@@ -1,10 +1,11 @@
-version: "3.8"
+version: '3'
 services:
-  node:
-    build: .
-    image: node:20
-    container_name: node_c
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - '3000:3000'
+      - 3000:3000
     volumes:
       - .:/app
+    command: pnpm run dev

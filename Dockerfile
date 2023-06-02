@@ -2,21 +2,14 @@ FROM node:20
 
 RUN npm install -g pnpm
 
-# Create app directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
+# Install project dependencies
 RUN pnpm install
-# If you are building your code for production
-# RUN npm ci --omit=dev
 
-# Bundle app source
+# Copy the entire project directory to the container
 COPY . .
-
-EXPOSE 8080
-
-CMD [ "node", "server.js" ]
