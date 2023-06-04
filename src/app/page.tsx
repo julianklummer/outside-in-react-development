@@ -1,5 +1,10 @@
+import { RestaurantScreen } from "../../common/components/RestaurantSceen";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return <main className={styles.main}>Hello World</main>;
+  return (
+    <div className={styles.main}>
+      <RestaurantScreen />
+    </div>
+  );
 }
