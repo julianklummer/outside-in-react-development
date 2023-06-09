@@ -28,9 +28,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "common/components/RestaurantSceen.jsx",
-    "common/components/RestaurantList.jsx",
-    "common/components/RestaurantList.spec.js"
+    "common/components/RestaurantSceen.tsx",
+    "common/components/RestaurantList.tsx",
+    "common/components/RestaurantList.spec.tsx"
   ],
   "exclude": ["node_modules"]
 }
