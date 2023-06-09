@@ -6,7 +6,7 @@ describe("Listing Restaurants", () => {
       { id: 1, name: sushiPlace },
       { id: 2, name: pizzaPlace },
     ]);
-    cy.visit("localhost:3000/");
+    cy.visit("/");
     cy.contains(sushiPlace);
     cy.contains(pizzaPlace);
   });
